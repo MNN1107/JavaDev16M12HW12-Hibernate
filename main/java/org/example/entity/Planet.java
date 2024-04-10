@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 public class Planet {
     @Id
     @Column(length = 5)
+    @Pattern(regexp = "^[A-Z0-9]*$", message = "Incorrect format")
     private String id;
 
     @Column(nullable = false, length = 500)
